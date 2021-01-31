@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atelier 1</title>
+        <link rel="stylesheet" href="./project1Style.css">
+        
+
+    </head>
+
+    <body>
+        <form>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom"/><span>(*)</span>
+            <br/>
+
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd"/>
+            <br/>
+
+            <span>Afficher div</span>
+            <input type="radio" id="non" name="afficherDiv" value="non" checked onclick="aff()"/><label for="non">non</label>
+            <input type="radio" id="oui" name="afficherDiv" value="oui" onclick="aff()"/><label for="oui">oui</label>
+            <br/>
+
+            <div style="display:inline-block;">
+                <div id="Div">
+                    <label for="">choisir une ville:</label>
+                    <select id="mySelect">
+                        <option selected disabled>--chose ville--</option>
+                        <option value="1">Beni Mellal</option>
+                        <option value="2">Oujda</option>
+                        <option value="3">Tanger</option>
+                    </select>
+                </div>
+            </div> <br/>
+        
+        
+            <input type="reset" value="reset">
+            
+        </form>
+        <!--ici problème de type="submit" soit sur input balise ou sur button balise ,
+        si existe  a l'interieur de forme balise ,  les messages de balise div id="Erreur" n'affiche pas 
+        / ou peut diplay rapidment-->
+        <button type="button"  onclick="verifier()">Login</button> 
+
+        <div id="Erreur"></div>
+
+
+
+
+
+
+
+
+    <script src="./project1Script.js"></script>
+    </body>
+</html>
